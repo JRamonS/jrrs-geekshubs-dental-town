@@ -16,7 +16,7 @@ export const NavBar = () => {
               <div className='butom'>
               <Nav.Link as= {Link} to = "/home" className='NavDesign'>Home</Nav.Link>
               <Nav.Link as= {Link} to = "/treatment" className='NavDesign'>Treatment</Nav.Link>
-              <NavDropdown title="Services" id="basic-nav-dropdown">
+              <NavDropdown title="User" id="basic-nav-dropdown">
               <Nav.Link as= {Link} to = "/register" className='NavDesign'>Register</Nav.Link>
               <Nav.Link as= {Link} to = "/login" className='NavDesign'>Login</Nav.Link>
               </NavDropdown>
