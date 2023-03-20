@@ -8,12 +8,6 @@
 }
 
 
-.butom{
-    display: flex;
-    gap: 5em;
-    flex-direction: row;
-}
-
 .book{
 
     background-color: #00b8b8;
@@ -29,5 +23,4 @@ span {
 
 .NavDesign:hover{
     color: #00b8b8 !important;
-    /* border-radius: 1em; */
 }
