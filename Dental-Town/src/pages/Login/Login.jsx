@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { decodeToken } from "react-jwt";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { ButtonAct } from "../../Components/ButtonAct/ButtonAct";
 import { InputText } from "../../Components/InputText/InputText";
 import { validate } from "../../helpers/useful";
@@ -9,15 +10,9 @@ import { logMe } from "../../Services/apiCalls";
 import { login } from "../userSlice";
 
 
-// //Importo métodos de Redux
-// import { useDispatch } from "react-redux";
-// import { login } from "../userSlice";
-// import { logMe } from "../../Services/apiCalls";
-// import { decodeToken } from "react-jwt";
-
-
 export const Login = () => {
 
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
   const [credenciales, setCredenciales] = useState({
@@ -64,8 +59,12 @@ export const Login = () => {
                 console.log("token")
 
                 console.log(datosBackend);
+                console.log()
                 //Este es el momento en el que guardo en REDUX
                 dispatch(login({credentials: datosBackend}));
+                setTimeout(() => {
+                  navigate ('/profile')
+                }, 500);
             }
         )
         .catch(error => console.log(error))
