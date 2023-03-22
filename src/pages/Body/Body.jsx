@@ -6,6 +6,11 @@ import { Login } from '../Login/Login'
 import { Register } from '../Register/Register'
 import { Treatment } from '../Treatment/Treatment'
 import { Profile } from '../Profile/Profile'
+import { BookAppointment } from '../BookAppointment/BookAppointment'
+import { AppointmentAll } from '../Dentist/AppointmentAll'
+import { AllUsers } from '../AllUser/AllUsers'
+
+
 
 export const Body = () => {
   return (
@@ -17,6 +22,9 @@ export const Body = () => {
         <Route path='/login' element = {<Login/>}/>
         <Route path='/treatment' element = {<Treatment/>}/>
         <Route path='/profile' element = {<Profile/>}/>
+        <Route path='/bookAppointment' element = {<BookAppointment/>}/>
+        <Route path='/appointmentall' element = {<AppointmentAll/>}/>
+        <Route path='/allUsers' element = {<AllUsers/>}/>
         <Route path='*' element = {<Home/>}/>
       </Routes>
     

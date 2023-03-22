@@ -13,9 +13,11 @@ export const NavBar = () => {
 
   const dispatch = useDispatch();
 
+
+
   const logout = () => {
     dispatch(userout({ credentials: {}, token: '' }));
-    return navigate("/");
+    return navigate("/login");
   };
 
   
@@ -39,14 +41,14 @@ export const NavBar = () => {
               <>
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
                 <Nav.Link as={Link} to='/newRole'>ChangeRole</Nav.Link>
-                <Nav.Link as={Link} to='/user/all'>allUsers</Nav.Link>
+                <Nav.Link as={Link} to='/allUsers'>AllUsers</Nav.Link>
                 <Nav.Link as={Link} to='/user/all/detail'>allUsersDetails</Nav.Link>
               </>
               ) : ReduxCredentials?.credentials?.decodificado?.rolId === 2 ? (
                 <>
                 {/* <Nav.Link as={Link} to='/user/myprofile'>Profile</Nav.Link> */}
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
-                <Nav.Link as={Link} to='/appointment'>AllAppointment</Nav.Link>
+                <Nav.Link as={Link} to='/AppointmentAll'>AppointmentAll</Nav.Link>
                 <Nav.Link as={Link} to='/user/all'>Appointment</Nav.Link>
               </>
                ) :ReduxCredentials?.credentials?.decodificado?.rolId === 3 ? (
