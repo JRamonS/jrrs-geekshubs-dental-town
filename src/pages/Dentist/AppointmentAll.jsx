@@ -1,71 +1,89 @@
-import React, { useEffect, useState } from 'react'
-import { Spinner } from 'react-bootstrap';
+import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { AppointmentsAll  } from '../../services/apiCalls';
+import { AppointmentsAll } from '../../Services/apiCalls';
 import { userData } from '../userSlice';
-import './AppointmentAll.css'
+
+
+//Conexion a REDUX
+
+
+import { addChoosen } from '../detailSlice';
+
 
 export const AppointmentAll = () => {
 
-  const [appointment, setAppointment] = useState([]);
-
-  const ReduxCredentials = useSelector(userData);
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+    const [appointment, setAppointment] = useState([]);
 
 
-  useEffect(() => {
+    const ReduxCredentials = useSelector(userData);
+    console.log(ReduxCredentials)
 
-    if(appointment.length === 0){
-        AppointmentsAll(ReduxCredentials.credentials.token)
-        .then(
-          result => {
-            console.log(result)
-  
-            setAppointment(result.data.citasActivas)
-          }
-        )
-        .catch(error => console.log(error))
-    }
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-  },[appointment])
+    useEffect(()=>{
+        //console.log(users.length)
+        if(appointment.length === 0){
+
+          AppointmentsAll(ReduxCredentials.credentials.token)
+                .then(
+                    result => {
+                        console.log(result)
+                        //Efectivamente, despues de traer los usuarios de la base de datos, los guardamos en el hook
+                        setAppointment(result.data.citasActivas)
+                    }
+                )
+                .catch(error => console.log(error));
+        }
+
+    },[appointment])
+
+   
+
+     return (
+         <div className='usersDesign'>
+
+            { appointment.length > 0 ? 
+                
+                (<div>
+
+                    {
+                        appointment.map(
+                            tag => {
+                                return (
+                                    <div 
+                                    
+                                        key={tag.id}>
+
+                                        {tag.status}
+                                        
+
+                                    </div>
+                                )
+                            }
+                        )
+                    }
 
 
+                </div>)
 
+                : 
 
-  return (
-    <div>AppointmentsAsClient
+                (<div>ESTAN VINIENDO</div>)
 
-
-{ appointment.length > 0 ? 
-      (<div className="cardsContainer">
-        {
-          appointment.map(
-            tag => {
-                    return (
-                        <div
-                            onClick={()=>selected(tag)}
-                            key={tag.id}>
-                            {tag.status}
-                        </div>
-             
-              )
             }
-          )
 
-        }  
-        </div>)
-        
-        :
-
-        ( <Spinner animation="border" variant="primary" />)
-      
-      }
-    </div>
-  )
+         </div>
+     )
 }
+
+
+
+
+
+
+
 
 
 

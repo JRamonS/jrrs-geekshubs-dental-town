@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { bringUsers } from '../../Services/apiCalls';
+import { addChoosen } from '../detailSlice';
 
 
 //Conexion a REDUX
@@ -30,7 +31,6 @@ export const AllUsers = () => {
                 .then(
                     result => {
 
-                      console.log(result)
 
                      
 
@@ -47,8 +47,8 @@ export const AllUsers = () => {
       
       dispatch(addChoosen({ choosenObject: persona }))
       setTimeout(()=>{
-          navigate("/detail");
-          console.log(dispatch)
+          navigate("/user/all/detail");
+        console.log(persona);
       },500)
     }
 

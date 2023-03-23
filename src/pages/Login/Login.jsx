@@ -50,16 +50,14 @@ export const Login = () => {
 
               
                 let decodificado= decodeToken(respuesta.data.token)
-                console.log("decoded",decodificado)
+                // console.log("decoded",decodificado)
                 let datosBackend = {
                     token: respuesta.data.token,
                     usuario: "decoded", decodificado
                 }
 
-                console.log("token")
 
                 console.log(datosBackend);
-                // console.log()
                 //Este es el momento en el que guardo en REDUX
                 dispatch(login({credentials: datosBackend}));
                 setTimeout(() => {

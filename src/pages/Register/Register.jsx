@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { ButtonAct } from "../../Components/ButtonAct/ButtonAct";
 import { InputText } from "../../Components/InputText/InputText";
 import { validate } from "../../helpers/useful";
@@ -8,6 +9,8 @@ import {registerUser} from "../../Services/apiCalls"
 import "./Register.css"
 
 export const Register = () => {
+  const navigate = useNavigate();
+
   const [credenciales, setCredenciales] = useState({
     username: "",
     password: "",
