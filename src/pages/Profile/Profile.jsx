@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { NavBar } from '../../Components/NavBar/NavBar';
 
 
-import { detailSlice } from '../detailSlice';
+
+import { detailData } from '../detailSlice';
 import { getUserData } from '../../Services/apiCalls';
 
 
@@ -14,6 +14,17 @@ import { userData } from '../userSlice';
 
  
 export const Profile = () => {
+
+    const ReduxCredentials = useSelector(userData);
+   
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    
+
+
+
+
     const [users, setUsers] = useState({
     username: "",
     password: "",
@@ -28,37 +39,39 @@ export const Profile = () => {
     }
         
     );
-    // const detailRedux = useSelector(detailData);
-    const ReduxCredentials = useSelector(userData);
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+
+
 
     useEffect(() => {
         if (users.name === "") {
-        getUserProfile(ReduxCredentials.credentials.token)
+            getUserData(ReduxCredentials.credentials.token)
+          
             .then((result) => {
-            
+
+                console.log(ReduxCredentials.credentials.token)
+                
+
+            console.log(result.data)
             setUsers({
-                username: result.data.user.username,
-                password: result.data.user.password,
-                email: result.data.user.email,
-                name: result.data.user.name,
-                surname: result.data.user.surname,
-                address: result.data.user.address,
-                phone: result.data.user.phone,
-                date_of_birth: result.data.user.date_of_birth,
-                gender: result.data.user.gender,
-                postcode: result.data.user.postcode
+                username: result.data.username,
+                password: result.data.password,
+                email: result.data.email,
+                name: result.data.name,
+                surname: result.data.surname,
+                address: result.data.address,
+                phone: result.data.phone,
+                date_of_birth: result.data.date_of_birth,
+                gender: result.data.gender,
+                postcode: result.data.postcode
             });
-            console.log(getUserProfile);
             })
             .catch((error) => console.log(error));
         }
     }, [users]);
 
+    console.log(ReduxCredentials?.choosenObject?.username);
      return (
         <>
-        <NavBar />
         <hr />
          <div className=''>
             <div className='texto'>Username: </div>
@@ -73,6 +86,12 @@ export const Profile = () => {
             {ReduxCredentials?.choosenObject?.address}
             <div className='texto'>Phone: </div>
             {ReduxCredentials?.choosenObject?.phone}
+            <div className='texto'>Birth: </div>
+            {ReduxCredentials?.choosenObject?.date_of_birth}
+            <div className='texto'>Gender: </div>
+            {ReduxCredentials?.choosenObject?.gender}
+            <div className='texto'>Postcode: </div>
+            {ReduxCredentials?.choosenObject?.postcode}
          </div>
          </>
      )
