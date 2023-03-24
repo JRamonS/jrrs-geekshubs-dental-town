@@ -58,6 +58,9 @@ console.log(credentialsRdx)
     
     nuevoAppointment(infoAppointment, credentialsRdx.credentials.token);
     console.log(infoAppointment);
+    setTimeout(() => {
+      navigate ('/bookAppointment')
+    }, 500);
   };
 
 
