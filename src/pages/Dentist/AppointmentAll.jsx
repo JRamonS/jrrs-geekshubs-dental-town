@@ -17,7 +17,6 @@ export const AppointmentAll = () => {
 
 
     const ReduxCredentials = useSelector(userData);
-    console.log(ReduxCredentials)
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -29,13 +28,13 @@ export const AppointmentAll = () => {
           AppointmentsAll(ReduxCredentials.credentials.token)
                 .then(
                     result => {
-                        console.log(result)
                         //Efectivamente, despues de traer los usuarios de la base de datos, los guardamos en el hook
                         setAppointment(result.data.citasActivas)
+                        
                     }
-                )
-                .catch(error => console.log(error));
-        }
+                    )
+                    .catch(error => console.log(error));
+                }
 
     },[appointment])
 
@@ -52,11 +51,10 @@ export const AppointmentAll = () => {
                         appointment.map(
                             tag => {
                                 return (
-                                    <div 
-                                    
-                                        key={tag.id}>
+                                    <div key={tag.id}>
 
-                                        {tag.status}
+                
+                                        {tag.date}
                                         
 
                                     </div>

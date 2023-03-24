@@ -18,13 +18,14 @@ export const Profile = () => {
     address: "",
     phone: "",
   });
+
+  
   useEffect(() => {
     //Este useEffect se va a ejecutar SIEMPRE que hayan cambios en el hook credenciales
     if (user.name === "") {
       getUserData(ReduxCredentials.credentials.token)
         .then((resultado) => {
           setUser({
-            // name: resultado?.data?.name,
             name: resultado?.data?.name,
             surname: resultado?.data?.surname,
             email: resultado?.data?.email,
@@ -34,6 +35,7 @@ export const Profile = () => {
         })
         .catch((error) => console.log(error));
     }
+    
   }, []);
 
   return (

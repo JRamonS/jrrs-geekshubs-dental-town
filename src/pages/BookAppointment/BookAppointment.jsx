@@ -60,9 +60,8 @@ console.log(credentialsRdx)
   const bookApp = () => {
     
     nuevoAppointment(infoAppointment, credentialsRdx.credentials.token);
-    console.log(infoAppointment);
     setTimeout(() => {
-      navigate ('/bookAppointment')
+      navigate ('/AppointmentsAsClient')
     }, 500);
   };
 
