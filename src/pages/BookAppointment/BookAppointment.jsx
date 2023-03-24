@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { InputText } from '../../Components/InputText/InputText';
 import { nuevoAppointment } from '../../Services/apiCalls';
 import { userData } from '../userSlice';
 
 
 export const BookAppointment = () => {
+
+  const navigate = useNavigate();
 
     const credentialsRdx = useSelector(userData);
 console.log(credentialsRdx)
