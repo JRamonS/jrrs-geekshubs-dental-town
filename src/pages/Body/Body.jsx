@@ -9,7 +9,9 @@ import { Profile } from '../Profile/Profile'
 import { BookAppointment } from '../BookAppointment/BookAppointment'
 import { AppointmentAll } from '../Dentist/AppointmentAll'
 import { AllUsers } from '../AllUser/AllUsers'
-import { UserDetails } from '../userAdmin/userDetails/userDetails'
+import { UserDetails } from '../userAdmin/userDetails/UserDetails'
+import { AppointmentsAsClient} from '../SeeAppointment/AppointmentsAsClient'
+
 
 
 
@@ -27,6 +29,7 @@ export const Body = () => {
         <Route path='/appointmentall' element = {<AppointmentAll/>}/>
         <Route path='/allUsers' element = {<AllUsers/>}/>
         <Route path='/user/all/detail' element = {<UserDetails/>}/>
+        <Route path='/AppointmentsAsClient' element = {<AppointmentsAsClient/>}/>
         <Route path='*' element = {<Home/>}/>
       </Routes>
     

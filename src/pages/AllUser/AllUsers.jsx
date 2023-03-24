@@ -48,7 +48,6 @@ export const AllUsers = () => {
       dispatch(addChoosen({ choosenObject: persona }))
       setTimeout(()=>{
           navigate("/user/all/detail");
-        console.log(persona);
       },500)
     }
 

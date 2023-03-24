@@ -24,7 +24,6 @@ export const Register = () => {
     postcode: "",
   });
 
-  console.log(credenciales)
 
   const [valiCredenciales, setValiCredenciales] = useState({
     username: false,

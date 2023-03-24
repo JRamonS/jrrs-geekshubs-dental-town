@@ -56,7 +56,9 @@ export const NavBar = () => {
                 {/* <Nav.Link as={Link} to='/profile'>Profile</Nav.Link> */}
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
                 <div className='boton'>
-              <Nav.Link as= {Link} to = "/bookAppointment" className='book'>BOOK APPOINTMENT</Nav.Link>
+                <Nav.Link as= {Link} to = "/AppointmentsAsClient">Appointment Client</Nav.Link>
+                <Nav.Link as= {Link} to = "/bookAppointment" className='book'>BOOK APPOINTMENT</Nav.Link>
+              
               </div>
                 </>
                 ) : (

@@ -19,15 +19,15 @@ export const UserDetails = () => {
        
          <div className=''>
          <div className="texto">Name: </div>
-        {detailUser.name}
+        {detailUser?.choosenObject?.name}
         <div className="texto">Surname: </div>
-        {detailUser.surname}
+        {detailUser?.choosenObject?.surname}
         <div className="texto">Email: </div>
-        {detailUser.email}
+        {detailUser?.choosenObject?.email}
         <div className="texto">Address: </div>
-        {detailUser.address}
+        {detailUser?.choosenObject?.address}
         <div className="texto">Phone: </div>
-        {detailUser.phone}
+        {detailUser?.choosenObject?.phone}
          </div>
        
          </>
