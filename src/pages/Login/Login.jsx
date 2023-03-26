@@ -8,6 +8,7 @@ import { InputText } from "../../Components/InputText/InputText";
 import { validate } from "../../helpers/useful";
 import { logMe } from "../../Services/apiCalls";
 import { login } from "../userSlice";
+import './Login.css' 
 
 
 export const Login = () => {
@@ -143,7 +144,7 @@ export const Login = () => {
   const sendValue = () => {};
 
   return (
-    <Container>
+    <Container className="main main-size">
       <Row className="LoginRow">
         <Col lg={6}>
           <Form>
@@ -169,7 +170,7 @@ export const Login = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label>Password</Form.Label>
               <InputText
                 className={
                   credencialesError.passwordError === ""
