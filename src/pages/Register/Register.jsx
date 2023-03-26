@@ -116,6 +116,7 @@ export const Register = () => {
     }
 
   return (
+    <div>
     <Container>
       <Row>
         <Col md={12} lg={6}>
@@ -304,57 +305,7 @@ export const Register = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 
-// import React, { useEffect, useState } from "react";
-// import { Col, Container, Row } from "react-bootstrap";
-// import { Form } from "react-router-dom";
-// import { ButtonAct } from "../../Components/ButtonAct/ButtonAct";
-// import { InputText } from "../../Components/InputText/InputText";
-// import { validate } from "../../helpers/useful";
-// import "./Register.css"
-
-//   return (
-//   
-
-//          
-
-//         
-
-//            
-
-//             <Form.Group className="mb-3" controlId="formBasicPostcode">
-//               <Form.Label>Postcode</Form.Label>
-//               <InputText
-//                 className={
-//                   credencialesError.postcodeError === ""
-//                     ? "inputBasicDesign"
-//                     : "inputBasicDesign inputErrorDesign"
-//                 }
-//                 type={"number"}
-//                 name={"zip"}
-//                 placeholder={"Postcode"}
-//                 required={true}
-//                 changeFunction={(e) => inputHandler(e)}
-//                 blurFunction={(e) => checkError(e)}
-//                 validateFunction={(e) => inputValidate(e)}
-//               />
-//               <Form.Text className="text-danger">
-//                 {credencialesError.postcodeError}
-//               </Form.Text>
-
-//               <ButtonAct
-//               className={loginAct ? "loginSendDeac loginSendAct" : "loginSendDeac"}
-//               buttonName="Register"
-//               // onClick={loginAct ? sendValue : () => {}}
-//               onClick={loginAct ? logeame : () => {}}
-
-//             />
-//             </Form.Group>
-//           </Form>
-//         </Col>
-//       </Row>
-//     </Container>
-//   );
-// };

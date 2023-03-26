@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// const root = "https://goodsmile-production-e99f.up.railway.app/"
+const root = "https://goodsmile-production-e99f.up.railway.app/"
 
-const root = "http://localhost:3000/"
+// const root = "http://localhost:3000/"
 
 
 export const logMe = async (body) => {
@@ -10,9 +10,6 @@ export const logMe = async (body) => {
     return await axios.post(`${root}login`, body);
 };
 
-// export const newUser = async (body) => {
-//     return await axios.post(`${root}/user`, body)
-// };
 
 export const getUserData = async (token) => {
     let config = {        headers: { 'Authorization': 'Bearer '+ token,   }    };

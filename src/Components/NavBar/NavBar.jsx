@@ -30,35 +30,32 @@ export const NavBar = () => {
             <Nav className="mx-auto">
   
               <Nav.Link as= {Link} to = "/home" className='NavDesign'>Home</Nav.Link>
-              {/* <Nav.Link as= {Link} to = "/register" className='NavDesign'>Register</Nav.Link>
-              <Nav.Link as= {Link} to = "/login" className='NavDesign'>Login</Nav.Link> */}
               <Nav.Link as= {Link} to = "/treatment" className='NavDesign'>Treatment</Nav.Link>
-              <Nav.Link  className='perfil' as={Link} to='/profile'>
+              <Nav.Link  className='perfil NavDesign' as={Link} to='/profile'>
               <div>{ReduxCredentials?.credentials?.decodificado?.username}</div>
               </Nav.Link>
 
               {ReduxCredentials?.credentials?.decodificado?.rolId === 1 ? (
               <>
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
-                <Nav.Link as={Link} to='/newRole'>ChangeRole</Nav.Link>
-                <Nav.Link as={Link} to='/allUsers'>AllUsers</Nav.Link>
-                <Nav.Link as={Link} to='/user/all/detail'>allUsersDetails</Nav.Link>
+                <Nav.Link as={Link} to='/newRole' className='NavDesign'>ChangeRole</Nav.Link>
+                <Nav.Link as={Link} to='/allUsers' className='NavDesign'>AllUsers</Nav.Link>
+                <Nav.Link as={Link} to='/user/all/detail' className='NavDesign'>allUsersDetails</Nav.Link>
               </>
               ) : ReduxCredentials?.credentials?.decodificado?.rolId === 2 ? (
                 <>
                 {/* <Nav.Link as={Link} to='/user/myprofile'>Profile</Nav.Link> */}
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
-                <Nav.Link as={Link} to='/AppointmentAll'>AppointmentAll</Nav.Link>
-                <Nav.Link as={Link} to='/user/all'>Appointment</Nav.Link>
+                <Nav.Link as={Link} to='/AppointmentAll' className='NavDesign'>AppointmentAll</Nav.Link>
+                <Nav.Link as={Link} to='/user/all' className='NavDesign'>Appointment</Nav.Link>
               </>
                ) :ReduxCredentials?.credentials?.decodificado?.rolId === 3 ? (
                 <>
-                {/* <Nav.Link as={Link} to='/profile'>Profile</Nav.Link> */}
-                <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
+                <Nav.Link as={Link} to='/logout' className='NavDesign'onClick={() => logout()}>Logout</Nav.Link>
                 <div className='boton'>
-                <Nav.Link as= {Link} to = '/AppointmentsAsClient'>Appointment Client</Nav.Link>
-                <Nav.Link as= {Link} to = '/modifyAppointment'>Modify Appointment</Nav.Link>
-                <Nav.Link as= {Link} to = '/bookAppointment' className='book'>BOOK APPOINTMENT</Nav.Link>
+                <Nav.Link as= {Link} to = '/AppointmentsAsClient'className='NavDesign'>Appointment</Nav.Link>
+                <Nav.Link as= {Link} to = '/modifyAppointment' className='NavDesign'>Modify</Nav.Link>
+                <Nav.Link as= {Link} to = '/book'className='NavDesign'>BOOK</Nav.Link>
               
               </div>
                 </>

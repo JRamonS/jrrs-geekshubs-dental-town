@@ -1,21 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { InputText } from '../../Components/InputText/InputText';
 import { nuevoAppointment } from '../../Services/apiCalls';
 import { userData } from '../userSlice';
 
 
-export const BookAppointment = () => {
+export const Book = () => {
 
   const navigate = useNavigate();
 
     const credentialsRdx = useSelector(userData);
-console.log(credentialsRdx)
+
   const [infoAppointment, setInfoAppointment] = useState({
     date: "",
-    // user_id: credentialsRdx.credentials.user.userId
     dentist_id: "",
     treatment_id: "",
 
@@ -54,9 +53,6 @@ console.log(credentialsRdx)
 
 
 
-    // if (credentialsRdx.credentials.token) {
-
-
   const bookApp = () => {
     
     nuevoAppointment(infoAppointment, credentialsRdx.credentials.token);
@@ -65,11 +61,9 @@ console.log(credentialsRdx)
     }, 500);
   };
 
-
-      /////////////////////////////////////////////////////
       return (
         <>
-          <div className='container-icon'>
+          <div className='container mt-3'>
             <i className="bi bi-person-workspace icon-login"></i>
           </div>
           <Container className="container-register">
@@ -112,7 +106,7 @@ console.log(credentialsRdx)
                 : () => {}
             }
           >
-            Register me!
+           <h3 className='NavDesign'>Register me!</h3>
           </div>
             </Row>
           </Container>

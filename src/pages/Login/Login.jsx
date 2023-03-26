@@ -192,7 +192,7 @@ export const Login = () => {
 
             <ButtonAct 
               className={loginAct ? "loginSendDeac loginSendAct" : "loginSendDeac"}
-              buttonName="Confirmar"
+              buttonName="Login"
               // onClick={loginAct ? sendValue : () => {}}
               onClick={loginAct ? logeame : () => {}}
               
