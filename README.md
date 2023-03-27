@@ -65,9 +65,29 @@ The login gives us access to the site as a registered user. To log in we need to
 <img width="942" alt="Screenshot_35" src="https://user-images.githubusercontent.com/118629906/227873590-60d2300e-e960-4a9a-ab47-934996e78bf6.png">
 
 
-### --> PROFILE USER
+### --> USER PROFILE
+
+In the profile we can see our user details, view, request and modify our appointments. 
 
 
-
+ <img width="960" alt="Screenshot_36" src="https://user-images.githubusercontent.com/118629906/227877961-62717bf1-8815-49b0-95f1-32d04f92bda3.png">
  
+ ### --> ADMIN
+ 
+ If we access the website as an administrator user, we can find the 'Admin' section. Once logged in we can see several drop-down menus with different options. The 'Admin' can see all the users.
+ 
+ 
+ <img width="957" alt="Screenshot_37" src="https://user-images.githubusercontent.com/118629906/227879529-4481fbcb-1328-4240-8a89-4b131eae7e2b.png">
+
+
+### ---> DENTIST PROFILE
+
+If we access the website as a Doctor user, we can find the 'Doctor' section. Once logged in we can see several drop-down menus with different options. The 'Doctor' can see all appointments.
+
+
+<img width="957" alt="Screenshot_38" src="https://user-images.githubusercontent.com/118629906/227880683-807b7889-7347-4fd7-a979-3965b0536fd9.png">
+
+
+## License
+This project is under MIT License.
  
