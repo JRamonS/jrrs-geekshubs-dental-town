@@ -6,21 +6,21 @@
     <li><a href="#objetivo">Objective</a></li>
     <li><a href="#sobre-el-proyecto">About the project</a></li>
     <li><a href="#stack">Stack</a></li>
-    <li><a href="#instalación-en-local">Installation🚀</a></li>
-    <li><a href="#futuras-funcionalidades">Future functionalities</a></li>
-    <li><a href="#estado">Project status</a></li>
-    <li><a href="#contribuciones">Contributions</a></li>
-    <li><a href="#licencia">License</a></li>
-    <li><a href="#webgrafia">References</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-    <li><a href="#agradecimientos">Acknowledgments</a></li>
+    <li><a href="#FRONTEND">FRONTEND</a></li>
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#REGISTER">REGISTER</a></li>
+    <li><a href="#LOGIN">LOGIN</a></li>
+    <li><a href="#USER PROFILE">USER PROFILE</a></li>
+    <li><a href="#ADMIN">ADMIN</a></li>
+    <li><a href="#DENTIST PROFILE">DENTIST PROFILE</a></li>
+    <li><a href="#License">License</a></li>
     <li><a href="#contacto">Contacto</a></li>
 
   </ol>
 </details>
 
 # Objective
-This project required a functional Font-end connected to a database for a business, in this case a dental clinic, as well as verification tokens for access to certain sections of the clinic's website depending on the type of user.
+This project required a functional Font-end connected to a database for a business, in this case a Town Dental, as well as verification tokens for access to certain sections of the clinic's website depending on the type of user.
 ## About the project
 I have created an Website connected to the database for a dental clinic where the user can register and login, as well as access different parts of the database depending on the type of user that has been registered.
 
@@ -48,7 +48,9 @@ Technologies used:
  
  The HOME view is the first view we find when we enter the website. Without being logged in, once logged in, we will have access to our profile, request, modify and see all our appointments.
  
- <img width="947" alt="Screenshot_33" src="https://user-images.githubusercontent.com/118629906/227871851-6143d9b8-22a6-40a0-bd27-a0746a577eff.png">
+<img width="950" alt="Screenshot_3" src="https://user-images.githubusercontent.com/118629906/228029187-6f9f5121-7c2c-4416-9311-e5d8a9ad3040.png">
+
+
 
 
 ### --> REGISTER
@@ -69,25 +71,64 @@ The login gives us access to the site as a registered user. To log in we need to
 
 In the profile we can see our user details, view, request and modify our appointments. 
 
+<img width="947" alt="Screenshot_4" src="https://user-images.githubusercontent.com/118629906/228029401-6d1f468a-f194-416b-9898-36debf7ab172.png">
 
- <img width="960" alt="Screenshot_36" src="https://user-images.githubusercontent.com/118629906/227877961-62717bf1-8815-49b0-95f1-32d04f92bda3.png">
+
  
  ### --> ADMIN
  
  If we access the website as an administrator user, we can find the 'Admin' section. Once logged in we can see several drop-down menus with different options. The 'Admin' can see all the users.
  
  
- <img width="957" alt="Screenshot_37" src="https://user-images.githubusercontent.com/118629906/227879529-4481fbcb-1328-4240-8a89-4b131eae7e2b.png">
+ <img width="952" alt="Screenshot_5" src="https://user-images.githubusercontent.com/118629906/228029472-a7a5205d-38c3-4e78-8218-cfc75ec08f93.png">
 
 
 ### ---> DENTIST PROFILE
 
 If we access the website as a Doctor user, we can find the 'Doctor' section. Once logged in we can see several drop-down menus with different options. The 'Doctor' can see all appointments.
 
+<img width="947" alt="Screenshot_6" src="https://user-images.githubusercontent.com/118629906/228029610-b779ba13-512d-46b3-b9cc-49cef3c3aab2.png">
 
-<img width="957" alt="Screenshot_38" src="https://user-images.githubusercontent.com/118629906/227880683-807b7889-7347-4fd7-a979-3965b0536fd9.png">
+## Project status
+Project under construction
+
+## Contributions
+Suggestions and contributions are always welcome.
+
+## Conclusion
+I managed to raise and develop the proposed objective of creating a Website connected to its database for a Town Dental using React node and JavaScript technologies. It addressed the main aspects of the project. As the possibility of registration and login, modification and deletion of appointments, and display of treatments, access via tokens to different routes etc…
+
+This application, still ongoing as a few functions,  is not working properly.
 
 
 ## License
 This project is under MIT License.
+
+## Gratitude
+
+I thank my colleagues for their time dedicated to this project:
+
+- **Dani**  
+<a href="https://github.com/datata" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=red" target="_blank"></a>
+
+- ***David***  
+<a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
+
+- ***Mara***  
+<a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
+
+- ***Alvaro***  
+<a href="https://github.com/alvarito101093" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
+
+- ***Jose***  
+<a href="https://github.com/JoseMarin" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
+
+## Contact
+
+
+-  ***José Ramón Rosario Santana*** 
+
+<a href="https://www.linkedin.com/in/jose-ramon-rosario-36721a242/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
+<a href="https://www.github.com/JRamonS/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
  
