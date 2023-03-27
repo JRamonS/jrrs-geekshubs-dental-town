@@ -58,7 +58,7 @@ export const Login = () => {
                 }
 
 
-                console.log(datosBackend);
+                // console.log(datosBackend);
                 //Este es el momento en el que guardo en REDUX
                 dispatch(login({credentials: datosBackend}));
                 setTimeout(() => {
