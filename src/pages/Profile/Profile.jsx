@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getUserData } from "../../Services/apiCalls";
 import "./Profile.css";
 import { userData } from "../userSlice";
+import { Card, Container } from "react-bootstrap";
 
 export const Profile = () => {
   const ReduxCredentials = useSelector(userData);
@@ -40,19 +41,18 @@ export const Profile = () => {
 
   return (
     <>
-      <hr />
-      <div className="">
-        <div className="texto">Name: </div>
-        {user.name}
-        <div className="texto">Surname: </div>
-        {user.surname}
-        <div className="texto">Email: </div>
-        {user.email}
-        <div className="texto">Address: </div>
-        {user.address}
-        <div className="texto">Phone: </div>
-        {user.phone}
-      </div>
+
+<Container className='Center' >
+      <Card> 
+        <Card.Body>
+          <Card.Title>Name:&nbsp; {user.name} </Card.Title>
+          <Card.Title>Surname:&nbsp; {user.surname} </Card.Title>
+          <Card.Title>Email:&nbsp; {user.email} </Card.Title>
+          <Card.Title>Address:&nbsp; {user.address} </Card.Title>
+          <Card.Title>Phone:&nbsp; {user.phone} </Card.Title> 
+        </Card.Body>
+    </Card>
+  </Container>
     </>
   );
 };

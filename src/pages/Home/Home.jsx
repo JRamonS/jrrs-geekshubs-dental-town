@@ -9,6 +9,7 @@ import './Home.css'
 export const Home = () => {
   return (
     <>
+    <div className='yes'>
 
     <Carousel>
       <Carousel.Item>
@@ -49,6 +50,7 @@ export const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
     </>
   );
 }

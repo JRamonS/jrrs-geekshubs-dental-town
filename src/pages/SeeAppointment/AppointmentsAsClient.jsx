@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Spinner } from 'react-bootstrap';
+import { Card, Container, Spinner } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { bringAppointments } from '../../Services/apiCalls';
@@ -67,17 +67,20 @@ export const AppointmentsAsClient = () => {
           appointments.map(
             appointment => {
               return (
-                  <div
-                    onClick = {() => appointmentSelected(appointment)}
-                    className= "userCardDesign"
-                    key={appointment.id}>
-                    {appointment.date}
-                    <div className="d-flex">
-                    <p className="pe-4 nameFieldDesign">Treatment:</p>
-                    <p>{appointment.Treatment.name}</p>
-                  </div>
-                    
-                  </div>
+
+                
+                <>
+                <Container className='Center' >
+                    <Card>
+                        <Card.Body
+                            onClick={()=>selected(appoint)}
+                            key={appointment.id} >
+                              <Card.Title>Date:&nbsp;{appointment.date}</Card.Title>
+                            <Card.Title>Treatment:&nbsp;{appointment.Treatment.name} </Card.Title>
+                            </Card.Body>
+                        </Card>
+                </Container>
+            </>
               )
             }
           )

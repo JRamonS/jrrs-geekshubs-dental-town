@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Card, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -64,13 +65,17 @@ export const AllUsers = () => {
                         users.map(
                             persona => {
                                 return (
-                                    <div className='profileDesign' 
-                                        onClick={()=>selected(persona)} 
-                                        key={persona.id}>
-
-                                        {persona.name}
-
-                                    </div>
+                                    <>
+                                    <Container className='Center' >
+                                        <Card>
+                                            <Card.Body
+                                                onClick={()=>selected(persona)}
+                                                key={persona.id} >
+                                                <Card.Title>Name: &nbsp; {persona.name} </Card.Title>
+                                                </Card.Body>
+                                            </Card>
+                                    </Container>
+                                </>
                                 )
                             }
                         )
