@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { InputText } from '../../Components/InputText/InputText';
 import { nuevoAppointment } from '../../Services/apiCalls';
 import { userData } from '../userSlice';
+// import './BookAppointment.css'
 
 
 export const Book = () => {
@@ -64,8 +65,8 @@ export const Book = () => {
       return (
         <>
           <div className='container mt-3'>
-            <i className="bi bi-person-workspace icon-login"></i>
-          </div>
+            <div className='newCitaDesign'>
+          
           <Container className="container-register">
             <Row className="row-input">
               <Col md={12} lg={6} className="container-inputs">
@@ -110,6 +111,8 @@ export const Book = () => {
           </div>
             </Row>
           </Container>
+          </div>
+          </div>
         </>
             );              
 

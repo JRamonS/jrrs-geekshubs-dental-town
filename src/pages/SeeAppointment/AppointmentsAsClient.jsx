@@ -39,10 +39,10 @@ export const AppointmentsAsClient = () => {
   }, [appointments]);
 
 
-  const appointmentSelected = (appointment) => {
+  const appointmentSelected = (appointment2) => {
 
-    dispatch(addChoosenAppointment({ choosenAppointment: appointment}))
-    console.log({ choosenAppointment: appointment})
+    dispatch(addChoosenAppointment({ choosenAppointment: appointment2}))
+    console.log({ choosenAppointment: appointment2})
     setTimeout(() => {
       navigate('/modify/appointment');
     }, 500)
@@ -73,7 +73,7 @@ export const AppointmentsAsClient = () => {
                 <Container className='Center' >
                     <Card>
                         <Card.Body
-                            onClick={()=>selected(appoint)}
+                            onClick={()=>appointmentSelected(appointment)}
                             key={appointment.id} >
                               <Card.Title>Date:&nbsp;{appointment.date}</Card.Title>
                             <Card.Title>Treatment:&nbsp;{appointment.Treatment.name} </Card.Title>

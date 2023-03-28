@@ -37,9 +37,7 @@ export const NavBar = () => {
               {ReduxCredentials?.credentials?.decodificado?.rolId === 1 ? (
               <>
                 <Nav.Link as={Link} to='/logout' onClick={() => logout()}>Logout</Nav.Link>
-                <Nav.Link as={Link} to='/newRole' className='NavDesign'>ChangeRole</Nav.Link>
                 <Nav.Link as={Link} to='/allUsers' className='NavDesign'>AllUsers</Nav.Link>
-                <Nav.Link as={Link} to='/user/all/detail' className='NavDesign'>allUsersDetails</Nav.Link>
               </>
               ) : ReduxCredentials?.credentials?.decodificado?.rolId === 2 ? (
                 <>
@@ -50,7 +48,6 @@ export const NavBar = () => {
                 <>
                 <Nav.Link as={Link} to='/logout' className='NavDesign'onClick={() => logout()}>Logout</Nav.Link>
                 <Nav.Link as= {Link} to = '/AppointmentsAsClient'className='NavDesign'>Appointment</Nav.Link>
-                <Nav.Link as= {Link} to = '/modifyAppointment' className='NavDesign'>Modify</Nav.Link>
                 <Nav.Link as= {Link} to = '/book'className='NavDesign'>BOOK</Nav.Link>
                 </>
                 ) : (

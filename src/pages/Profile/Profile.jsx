@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getUserData } from "../../Services/apiCalls";
 import "./Profile.css";
 import { userData } from "../userSlice";
-import { Card, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 export const Profile = () => {
   const ReduxCredentials = useSelector(userData);
@@ -40,22 +40,52 @@ export const Profile = () => {
   }, []);
 
   return (
-    <>
 
-<Container className='Center' >
-      <Card> 
-        <Card.Body>
-          <Card.Title>Name:&nbsp; {user.name} </Card.Title>
-          <Card.Title>Surname:&nbsp; {user.surname} </Card.Title>
-          <Card.Title>Email:&nbsp; {user.email} </Card.Title>
-          <Card.Title>Address:&nbsp; {user.address} </Card.Title>
-          <Card.Title>Phone:&nbsp; {user.phone} </Card.Title> 
-        </Card.Body>
-    </Card>
-  </Container>
-    </>
-  );
-};
+    <div className='profileDesign'>
+      <div className='infoProfile'>
+        <Row>
+          <Col className='colDesign'>
+            <div className='infoProfile2'>
+              <Row>
+                <Col>
+                  <p className='txtDesign text-center'>Name</p>
+                  <div className='cuadroTxtDesign'>
+                    {user.name}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p className='txtDesign text-center'>Surname</p>
+                  <div className='cuadroTxtDesign'>
+                    {user.surname}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p className='txtDesign text-center'>Phone</p>
+                  <div className='cuadroTxtDesign'>
+                    {user.phone}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p className='txtDesign text-center'>Email</p>
+                  <div className='cuadroTxtDesign'>
+                    {user.email}
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </div>
+  )
+}
+    
 
 
 

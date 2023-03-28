@@ -116,8 +116,8 @@ export const Register = () => {
     }
 
   return (
-    <div>
-    <Container>
+    <div className='registerDesign'>
+    <Container className="b">
       <Row>
         <Col md={12} lg={6}>
           <Form>
@@ -294,13 +294,15 @@ export const Register = () => {
               </Form.Text>      
             </Form.Group>
 
-            <ButtonAct
+            <div className="act">    
+            <ButtonAct 
               className={loginAct ? "loginSendDeac loginSendAct" : "loginSendDeac"}
               buttonName="Register"
               // onClick={loginAct ? sendValue : () => {}}
-              onClick={loginAct ? userRegister : () => {}}
-
+              onClick={loginAct ? logeame : () => {}}
+              
             />
+            </div>
           </Form>
         </Col>
       </Row>

@@ -144,11 +144,12 @@ export const Login = () => {
   const sendValue = () => {};
 
   return (
+    <div className="main2">
     <Container className="main main-size">
       <Row className="LoginRow">
         <Col lg={6}>
           <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3 text-center" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <InputText
                 className={
@@ -169,7 +170,7 @@ export const Login = () => {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3 text-center" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <InputText
                 className={
@@ -189,7 +190,7 @@ export const Login = () => {
                 {credencialesError.passwordError}
               </Form.Text>
             </Form.Group>
-
+            <div className="act">    
             <ButtonAct 
               className={loginAct ? "loginSendDeac loginSendAct" : "loginSendDeac"}
               buttonName="Login"
@@ -197,10 +198,12 @@ export const Login = () => {
               onClick={loginAct ? logeame : () => {}}
               
             />
+            </div>
           </Form>
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

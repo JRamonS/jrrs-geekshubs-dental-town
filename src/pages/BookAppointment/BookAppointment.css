@@ -1,3 +1,18 @@
 .NavDesign{
     color: #00b8b8 !important;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.newCitaDesign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}

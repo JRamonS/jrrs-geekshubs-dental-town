@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AppointmentsAll } from "../../Services/apiCalls";
 import { userData } from "../userSlice";
+import '../Dentist/AppointmentAll.css'
+
 
 //Conexion a REDUX
 
@@ -30,14 +32,14 @@ export const AppointmentAll = () => {
   }, [appointment]);
 
   return (
-    <div className="usersDesign">
+    <div className="cardsContainer ">
       {appointment.length > 0 ? (
         <div>
           {appointment.map((tag) => {
             return (
               <>
-                <Container className="Center">
-                  <Card>
+                <Container >
+                  <Card className="Center">
                     <Card.Body key={tag.id}>
                       <Card.Title>Date:&nbsp;{tag.date}</Card.Title>
                     </Card.Body>

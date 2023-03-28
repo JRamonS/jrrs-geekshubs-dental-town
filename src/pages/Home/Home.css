@@ -1,0 +1,21 @@
+.homeDesign{
+    background-color: rgb(185, 218, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.imgDesign{
+    width: 50vw;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 992px){
+    .imgDesign{
+        width: 90vw;
+        height: 30vh;
+    }
+}

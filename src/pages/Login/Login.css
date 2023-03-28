@@ -1,0 +1,13 @@
+.main2{
+    background-color: rgb(185, 218, 228);
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.act{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+.usersDesign{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+       
+}
+
+.m{
+    margin: 3px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    border: solid 2px #00b8b8 !important;    
+}
+
+

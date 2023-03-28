@@ -1,12 +1,12 @@
 .loginSendDeac {
 
-    height: 2em;
-    width: 9em;
-
-    background-color: tomato;
-
-    border-radius: 0.2em;
-    color: white;
+    width: 5em;
+    height: 1.5em;
+    background-color: #00b8b8;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid 2px black;
+    font-family: 'Myfont';
 
     display: flex;
     justify-content: center;
@@ -16,12 +16,12 @@
 .loginSendAct {
 
     cursor: pointer;
-    background-color: red;
+    background-color: lightblue;
     
 }
 
 .loginSendAct:hover {
 
     transition: 1s;
-    background-color: darkred;
+    background-color: rgb(106, 186, 210);
 }
