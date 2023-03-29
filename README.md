@@ -48,7 +48,9 @@ Technologies used:
  
  The HOME view is the first view we find when we enter the website. Without being logged in, once logged in, we will have access to our profile, request, modify and see all our appointments.
  
-<img width="950" alt="Screenshot_3" src="https://user-images.githubusercontent.com/118629906/228029187-6f9f5121-7c2c-4416-9311-e5d8a9ad3040.png">
+<img width="949" alt="Screenshot_7" src="https://user-images.githubusercontent.com/118629906/228684091-19b08adb-b18d-450f-ae41-f3c2158ee13f.png">
+
+<img width="947" alt="Screenshot_8" src="https://user-images.githubusercontent.com/118629906/228684121-87f6d918-3eac-4237-8114-20b80be47ca1.png">
 
 
 
@@ -57,37 +59,43 @@ Technologies used:
 
 The 'Register' page allows us to register a new user. The fields to create the user are mandatory. Each input will indicate in case of error whether the fields entered are valid or invalid.
  
- <img width="948" alt="Screenshot_34" src="https://user-images.githubusercontent.com/118629906/227872991-1c529579-e236-41a6-9875-06976f4a7ee3.png">
+ <img width="946" alt="Screenshot_10" src="https://user-images.githubusercontent.com/118629906/228684228-dd3f2d9d-7e3f-4b8d-95cf-434bdd301acc.png">
+
 
 
 ### --> LOGIN
 
 The login gives us access to the site as a registered user. To log in we need to enter the 'email' and 'password'.
 
-<img width="942" alt="Screenshot_35" src="https://user-images.githubusercontent.com/118629906/227873590-60d2300e-e960-4a9a-ab47-934996e78bf6.png">
+<img width="950" alt="Screenshot_9" src="https://user-images.githubusercontent.com/118629906/228684300-64d4aec5-00e3-4d18-9944-ae7b6c5dbb04.png">
+
 
 
 ### --> USER PROFILE
 
 In the profile we can see our user details, view, request and modify our appointments. 
 
-<img width="947" alt="Screenshot_4" src="https://user-images.githubusercontent.com/118629906/228029401-6d1f468a-f194-416b-9898-36debf7ab172.png">
+<img width="948" alt="Screenshot_11" src="https://user-images.githubusercontent.com/118629906/228684373-af0c9bc1-d65a-4995-b332-f88055d63219.png">
 
+
+<img width="949" alt="Screenshot_12" src="https://user-images.githubusercontent.com/118629906/228684488-a56a0026-5ad6-4f3d-b764-d673b770d102.png">
 
  
  ### --> ADMIN
  
  If we access the website as an administrator user, we can find the 'Admin' section. Once logged in we can see several drop-down menus with different options. The 'Admin' can see all the users.
  
+ <img width="949" alt="Screenshot_14" src="https://user-images.githubusercontent.com/118629906/228684955-80c24580-b432-4302-b28e-8f47f53e0dd6.png">
+
  
- <img width="952" alt="Screenshot_5" src="https://user-images.githubusercontent.com/118629906/228029472-a7a5205d-38c3-4e78-8218-cfc75ec08f93.png">
 
 
 ### ---> DENTIST PROFILE
 
 If we access the website as a Doctor user, we can find the 'Doctor' section. Once logged in we can see several drop-down menus with different options. The 'Doctor' can see all appointments.
 
-<img width="947" alt="Screenshot_6" src="https://user-images.githubusercontent.com/118629906/228029610-b779ba13-512d-46b3-b9cc-49cef3c3aab2.png">
+<img width="947" alt="Screenshot_15" src="https://user-images.githubusercontent.com/118629906/228685100-001f5f78-3dfc-454c-8f2e-af603a6410d3.png">
+
 
 ## Project status
 Project under construction
