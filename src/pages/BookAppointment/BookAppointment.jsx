@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { InputText } from '../../Components/InputText/InputText';
 import { nuevoAppointment } from '../../Services/apiCalls';
 import { userData } from '../userSlice';
-// import './BookAppointment.css'
+import './BookAppointment.css'
 
 
-export const Book = () => {
+
+
+
+export const BookAppointment = () => {
 
   const navigate = useNavigate();
 
@@ -16,10 +19,28 @@ export const Book = () => {
 
   const [infoAppointment, setInfoAppointment] = useState({
     date: "",
-    dentist_id: "",
     treatment_id: "",
+    hour: "",
 
   });
+
+
+  const [treatment, setTreatment] = useState([
+    {
+      id: 1,
+      name: "Scale and polish",
+    },
+    {
+      id: 2,
+      name: "White fillings",
+    },
+    {
+      id: 3,
+      name: "Root canal treatment (endodontics)",
+    },
+  ]);
+
+
 
   const inputHandler = (e) => {
     setInfoAppointment((prevState) => ({
@@ -63,57 +84,75 @@ export const Book = () => {
   };
 
       return (
-        <>
-          <div className='container mt-3'>
-            <div className='newCitaDesign'>
-          
-          <Container className="container-register">
-            <Row className="row-input">
-              <Col md={12} lg={6} className="container-inputs">
-                <Form>
-                  <InputText className={ "inputBasicDesign"}
-                        type={"datetime-local"}
-                        name={"date"}
-                        required={true}
-                        changeFunction={(e) => inputHandler(e)}
-                        blurFunction={(e) => checkError(e)} 
-                      />
-                      <Form.Group>
-                 <Form.Label>Treatment Id:</Form.Label>
-                 <InputText className={"treatment_id"}
-                                type={"number"} name={"treatment_id"} placeholder={"treatment_id"} required={true}
-                                changeFunction={(e) => inputHandler(e)} blurFunction={(e) => checkError(e)} />
-            </Form.Group>
+        
+       <div className='h'>
 
-            <Form.Group>
-                 <Form.Label>Dentist_id:</Form.Label>
-                 <InputText className={"dentist_id"}
-                                type={"number"} name={"dentist_id"} placeholder={"dentist_id"} required={true}
-                                changeFunction={(e) => inputHandler(e)} blurFunction={(e) => checkError(e)} />
+<Container className="mt-5 mb-5">
+      <Row className="mb-3 rowDesign">
+        <Col id="formGridDate">
+          <div className="d-flex flex-column">
+            <p className="pe-4 nameFieldDesign text-center">Date:</p>
+            <InputText
+              className="dateInputDesign"
+              type={"date"}
+              name={"date"}
+              required={true}
+              changeFunction={(e) => inputHandler(e)}
+              blurFunction={(e) => checkError(e)}
+            />
+          </div>
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col id="formGridDate">
+          <Form>
+            <Form.Group className="mb-3">
+              <p className="pe-4 nameFieldDesign text-center">Treatment:</p>
+              <Form.Select
+                name={"treatment_id"}
+                onChange={(e) => inputHandler(e)}
+                aria-label="Default select example"
+              >
+                <option>Choose your treatment:</option>
+
+                {treatment.map((treatment) => {
+                  return (
+                    <option key={treatment.id} value={treatment.id}>
+                      {treatment.name}
+                    </option>
+                  );
+                })}
+              </Form.Select>
             </Form.Group>
-                </Form>      
-                </Col>   
-              <div
+          </Form>
+        </Col>
+      </Row>
+      <Row className="mb-3  d-flex justify-content-center">
+        <div className='j'>
+        <div
           type="submit"
-            className={
-              BookAppointmentAct ? "registerSendDeac registerSendAct" : "registerSendDeac"
-            }
-            onClick={
-              //Si el hook registerAct es true, el onclick nos permitirá ejecutar la función que haría el registro....
-              BookAppointmentAct
-                ? () => {
-                    bookApp();
-                  }
-                : () => {}
-            }
-          >
-           <h3 className='NavDesign'>Register me!</h3>
-          </div>
-            </Row>
-          </Container>
-          </div>
-          </div>
-        </>
+          className={
+            BookAppointmentAct
+              ? "registerSendDeac buttonDesign text-center"
+              : "registerSendDeac buttonDesign text-center"
+          }
+          onClick={
+            BookAppointmentAct
+              ? () => {
+                  bookApp();
+                }
+              : () => {}
+          }
+        >
+          Submit
+        </div>
+        </div>
+        
+      </Row>
+    </Container>
+    </div>
+        
             );              
 
 }

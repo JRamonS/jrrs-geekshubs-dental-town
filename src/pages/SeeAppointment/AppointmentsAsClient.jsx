@@ -1,9 +1,12 @@
+import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react'
 import { Card, Container, Spinner } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { bringAppointments } from '../../Services/apiCalls';
 import { addChoosenAppointment } from '../appointmentSlice';
+import './AppointmentsAsClient.css'
+
 
 
 import { userData } from '../userSlice';
@@ -59,10 +62,11 @@ export const AppointmentsAsClient = () => {
   }
 
   return (
-    <div> <h2>Your appointments:</h2>
+    <div className='b'>
+    <div> <h2 className='nameDising'>Your appointments :</h2>
 
 { appointments.length > 0 ? 
-      (<div className="cardsContainer">
+      (<div >
         {
           appointments.map(
             appointment => {
@@ -70,12 +74,12 @@ export const AppointmentsAsClient = () => {
 
                 
                 <>
-                <Container className='Center' >
-                    <Card>
+                <Container className='asClient' >
+                    <Card >
                         <Card.Body
                             onClick={()=>appointmentSelected(appointment)}
                             key={appointment.id} >
-                              <Card.Title>Date:&nbsp;{appointment.date}</Card.Title>
+                              <Card.Title>Date:&nbsp;{dayjs(appointment.date).format('YYYY-MMMM-DD')}</Card.Title>
                             <Card.Title>Treatment:&nbsp;{appointment.Treatment.name} </Card.Title>
                             </Card.Body>
                         </Card>
@@ -93,6 +97,7 @@ export const AppointmentsAsClient = () => {
         ( <Spinner animation="border" variant="primary" />)
       
       }
+    </div>
     </div>
   )
 }

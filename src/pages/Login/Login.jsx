@@ -147,7 +147,7 @@ export const Login = () => {
     <div className="main2">
     <Container className="main main-size">
       <Row className="LoginRow">
-        <Col lg={6}>
+        <Col lg={12}>
           <Form>
             <Form.Group className="mb-3 text-center" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
@@ -206,5 +206,4 @@ export const Login = () => {
     </div>
   );
 };
-
 

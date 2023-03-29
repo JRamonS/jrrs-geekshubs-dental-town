@@ -1,6 +1,8 @@
 .main2{
     background-color: rgb(185, 218, 228);
-    background-color: lightblue;
+}
+
+.main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,4 +12,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.LoginRow {
+    height: 61vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.g{
+    border: solid 2px #00b8b8;
 }

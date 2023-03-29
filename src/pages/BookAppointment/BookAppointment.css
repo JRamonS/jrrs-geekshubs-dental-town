@@ -1,18 +1,18 @@
-.NavDesign{
-    color: #00b8b8 !important;
+.h{
+    background-color: rgb(185, 218, 228);
+    display: flex;
+    justify-content: center;
+  height: 61vh;
 }
 
-.container{
+.j{
     display: flex;
     justify-content: center;
     align-items: center;
-   
-
-}
-
-.newCitaDesign{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #00b8b8;
   
+}
+
+.z{
+ 
 }

@@ -10,6 +10,7 @@ import '../Dentist/AppointmentAll.css'
 
 import { addChoosen } from "../detailSlice";
 import { Card, Container } from "react-bootstrap";
+import dayjs from "dayjs";
 
 export const AppointmentAll = () => {
   const [appointment, setAppointment] = useState([]);
@@ -24,6 +25,7 @@ export const AppointmentAll = () => {
     if (appointment.length === 0) {
       AppointmentsAll(ReduxCredentials.credentials.token)
         .then((result) => {
+          console.log(result);
           //Efectivamente, despues de traer los usuarios de la base de datos, los guardamos en el hook
           setAppointment(result.data.citasActivas);
         })
@@ -41,7 +43,8 @@ export const AppointmentAll = () => {
                 <Container >
                   <Card className="Center">
                     <Card.Body key={tag.id}>
-                      <Card.Title>Date:&nbsp;{tag.date}</Card.Title>
+                    <Card.Title>Date:&nbsp;{dayjs(tag.date).format("MM / DD HH:mm")}</Card.Title>
+                    <Card.Title>Treatment:&nbsp;{tag.treatment_id} </Card.Title>
                     </Card.Body>
                   </Card>
                 </Container>

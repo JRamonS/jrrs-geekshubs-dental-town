@@ -48,7 +48,7 @@ export const NavBar = () => {
                 <>
                 <Nav.Link as={Link} to='/logout' className='NavDesign'onClick={() => logout()}>Logout</Nav.Link>
                 <Nav.Link as= {Link} to = '/AppointmentsAsClient'className='NavDesign'>Appointment</Nav.Link>
-                <Nav.Link as= {Link} to = '/book'className='NavDesign'>BOOK</Nav.Link>
+                <Nav.Link as= {Link} to = '/bookAppointment'className='NavDesign'>BOOK</Nav.Link>
                 </>
                 ) : (
                   <>

@@ -1,20 +1,15 @@
-.LoginRow {
-    height: 100vh;
+.registerDesign{
+    background-color: lightblue;
 
-    display: flex;
-    align-items: center;
-    justify-content: center; */
-} 
+}
+
 
 .inputRegister:hover{
     background-color: #00b8b8;
     cursor: pointer;
 }
 
-.registerDesign{
-    background-color: lightblue;
 
-}
 
 .b{
     display: flex;

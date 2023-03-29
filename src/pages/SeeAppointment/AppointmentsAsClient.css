@@ -1,24 +1,25 @@
-.noAppoDesign, .spinnerDesign {
-    height: 65vh;
-}
 
-.btnNoAppBookDesign {
-    height:3em;
-    width: 10em;
+
+.asClient{
+    color: #00b8b8;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: var(--blue-dark);
-    color: white;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: 1s;
-    text-decoration: none;
+    margin-top: 10em;
+    margin-bottom: 10em;
+   
 }
 
-.btnNoAppBookDesign:hover {
-    box-shadow: 0 0 3px 3px rgb(137, 154, 222);
-    border: 0.05em solid var(--blue-dark);
-    background-color: rgb(151, 151, 193);
-    transition: 1s;
+.b{
+    background-color: rgb(185, 218, 228);
+}
+
+.nameDising{
+    color: #00b8b8;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card{
+    border: solid 2px #00b8b8;
 }

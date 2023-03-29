@@ -44,8 +44,8 @@ export const AllUsers = () => {
           {users.map((persona) => {
             return (
               <>
-                <Container className="Center">
-                  <Card className="m">
+                <Container className="m">
+                  <Card border="info">
                     <Card.Body
                       onClick={() => selected(persona)}
                       key={persona.id}
